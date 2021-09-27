@@ -1,11 +1,16 @@
 require 'rspec'
 require 'translator'
 require  'night_writer'
+require './lib/english_dictionary'
+require './lib/braille_dictionary'
+
 
 RSpec.describe Translator do
 
-  xit 'exists' do
-    translator = Translator.new(input)
+  it 'exists' do
+    translated_text = Translator.new(input_file)
+
+    require "pry"; binding.pry
     expect(translator).to be_an_instance_of(Translator)
   end
 
@@ -19,8 +24,8 @@ RSpec.describe Translator do
     expect(translator.output_array).to eq([])
   end
 
-  it 'can sort lines' do
+  xit 'can sort lines' do
 
-  end 
+  end
 
 end

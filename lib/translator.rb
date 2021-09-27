@@ -9,6 +9,7 @@ class Translator
   attr_reader :input
 
   def initialize(input)
+    #require "pry"; binding.pry
     @input = input.read.strip
   end
 
@@ -40,7 +41,7 @@ class Translator
 
   def line_limit_eighty
 
-  end 
+  end
 
   def english_to_braille
 
