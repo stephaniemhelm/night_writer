@@ -9,7 +9,6 @@ class Translator
   attr_reader :input
 
   def initialize(input)
-    #require "pry"; binding.pry
     @input = input.read.strip
   end
 

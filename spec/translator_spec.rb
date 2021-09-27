@@ -1,5 +1,5 @@
 require 'rspec'
-require 'translator'
+require_relative 'translator'
 require  'night_writer'
 require './lib/english_dictionary'
 require './lib/braille_dictionary'
@@ -8,10 +8,10 @@ require './lib/braille_dictionary'
 RSpec.describe Translator do
 
   it 'exists' do
-    translated_text = Translator.new(input_file)
+    translated = Translator.new("hello world")
 
     require "pry"; binding.pry
-    expect(translator).to be_an_instance_of(Translator)
+    expect(translated).to be_an_instance_of(Translator)
   end
 
   xit 'can load a file' do

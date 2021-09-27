@@ -10,21 +10,15 @@ class Detranslator
 
   def initialize(input)
     @input = input.read.strip
-    #require "pry"; binding.pry
   end
-
-  def input_array
-    array = []
-  end
-
-  def split_array
-
-  end 
-
-
 
   def braille_to_english
+    new_array = @input.split("\n")
 
+    require "pry"; binding.pry
+    @input.map do |characters|
+
+      require "pry"; binding.pry
+    end
   end
-
 end
