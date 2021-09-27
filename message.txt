@@ -1,2 +1,1 @@
-This message can be translated to braille.
-Have a great day.
+hello world

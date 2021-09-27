@@ -1,10 +1,21 @@
 require './lib/english_dictionary'
 require './lib/braille_dictionary'
 
-class Detranslator
+require_relative 'detranslator'
 
-  include BrailleDictionary
-  include EnglishDictionary
+input = ARGV[0]
+input_file = File.open(ARGV[0], "r")
+
+#REVERSE using detranslator class 
+string = `cat #{input} | wc -m`
+characters = string.lstrip.chomp!.to_i
+
+output_file = File.open(ARGV[1], "w")
+
+translated_text = Translator.new(input_file)
+
+output_file.write(translated_text.english_to_braille)
 
 
-end
+
+puts "Created #{input[1]} containing #{characters} characters"
