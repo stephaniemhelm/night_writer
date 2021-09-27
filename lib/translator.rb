@@ -38,6 +38,10 @@ class Translator
 
   end
 
+  def line_limit_eighty
+
+  end 
+
   def english_to_braille
 
     clean_first_line = sort_lines[0].to_s.gsub(/[^0.]/, "")

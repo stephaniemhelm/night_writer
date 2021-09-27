@@ -6,5 +6,10 @@ class Detranslator
   include BrailleDictionary
   include EnglishDictionary
 
+  attr_reader :input
+
+  def initialize(input)
+    @input = input.read.strip
+  end
 
 end

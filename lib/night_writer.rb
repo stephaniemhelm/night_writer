@@ -3,9 +3,10 @@ require_relative 'translator'
 input = ARGV[0]
 input_file = File.open(ARGV[0], "r")
 
+characters = input_file.to_s.length
 
-string = `cat #{input} | wc -m`
-characters = string.lstrip.chomp!.to_i
+# string = `cat #{input} | wc -m`
+# characters = string.lstrip.chomp!.to_i
 
 output_file = File.open(ARGV[1], "w")
 
