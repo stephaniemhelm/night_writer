@@ -14,11 +14,7 @@ class Detranslator
 
   def braille_to_english
     new_array = @input.split("\n")
-
     require "pry"; binding.pry
-    @input.map do |characters|
 
-      require "pry"; binding.pry
-    end
   end
 end
