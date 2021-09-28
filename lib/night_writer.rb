@@ -3,7 +3,7 @@ require './lib/braille_dictionary'
 
 require_relative 'translator'
 
-input = ARGV[0]
+input = (ARGV[0]).read.strip
 input_file = File.open(ARGV[0], "r")
 
 string = `cat #{input} | wc -m`

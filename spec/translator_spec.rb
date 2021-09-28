@@ -11,9 +11,9 @@ RSpec.describe Translator do
     expect(translated).to be_an_instance_of(Translator)
   end
 
-  xit 'can output an array' do
+  it 'can output an array' do
     translator = Translator.new("hello")
-    expect(translator.output_array).to eq(["0.", "00", "..", "0.", ".0", "..", "0.", "0.","0.", "0.", "0.", "0.", "0."])
+    expect(translator.output_array).to eq(["0.", "00", "..", "0.", ".0", "..", "0.", "0.", "0.", "0.", "0.", "0.", "0.", ".0", "0."])
   end
 
   xit 'can sort lines' do
@@ -23,6 +23,17 @@ RSpec.describe Translator do
     third_line = "....0.0.0....00.0.0..."
 
     expect(translator.sort_lines).to eq([first_line, second_line, third_line])
+  end
+
+  xit 'can translate english to braille' do
+    translator = Translator.new("hello world")
+
+    result =
+    "0.0.0.0.0....00.0.0.00
+    00.00.0..0..00.0000..0
+    ....0.0.0....00.0.0..."
+    expect(translator.english_to_braille).to eq(result)
+
   end
 
 end

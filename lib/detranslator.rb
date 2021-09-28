@@ -9,7 +9,7 @@ class Detranslator
   attr_reader :input
 
   def initialize(input)
-    @input = input.read.strip
+    @input = input
   end
 
   def braille_to_english
