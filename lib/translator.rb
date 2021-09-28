@@ -38,9 +38,6 @@ class Translator
 
   end
 
-  def line_limit_eighty
-
-  end
 
   def english_to_braille
 
