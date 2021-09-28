@@ -6,23 +6,23 @@ require './lib/braille_dictionary'
 
 RSpec.describe Translator do
 
-  xit 'exists' do
+  it 'exists' do
     translated = Translator.new("hello world")
     expect(translated).to be_an_instance_of(Translator)
   end
 
   xit 'can output an array' do
     translator = Translator.new("hello")
-    expect(detranslator.output_array).to eq(["0.", "00", "..", "0.", ".0", "..", "0.", "0.","0.", "0.", "0.", "0.", "0."])
+    expect(translator.output_array).to eq(["0.", "00", "..", "0.", ".0", "..", "0.", "0.","0.", "0.", "0.", "0.", "0."])
   end
 
   xit 'can sort lines' do
     translator = Translator.new("hello world")
-    first_line = 0.0.0.0.0....00.0.0.00
-    second_line = 00.00.0..0..00.0000..0
-    third_line = ....0.0.0....00.0.0...
+    first_line = "0.0.0.0.0....00.0.0.00"
+    second_line = "00.00.0..0..00.0000..0"
+    third_line = "....0.0.0....00.0.0..."
 
-    expect(detranslator.sort_lines).to eq([first_line, second_line, third_line])
+    expect(translator.sort_lines).to eq([first_line, second_line, third_line])
   end
 
 end

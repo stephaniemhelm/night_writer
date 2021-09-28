@@ -13,21 +13,37 @@ class Detranslator
   end
 
   def braille_to_english
-    new_array = @input.split("\n")
 
-    first_line = []
-    second_line = []
-    third_line = []
+    array = @input.split("\n")
+    # first_line = new_array[0]
+    # second_line = new_array[1]
+    # third_line = new_array[2]
 
-    first_line << new_array.shift.each_slice(2)
-    second_line << new_array.shift
-    third_line << new_array.shift
+    new_array= array.map do |line|
+      line.scan(/../)
+    end
 
+    last_array = new_array.transpose
 
-    first_line
-    second_line
-    third_line
-    require "pry"; binding.pry
+    to_english = last_array.map do |element|
+      braille_dictionary[element]
+    end.join
+    to_english
 
+    # first_line = []
+    # second_line = []
+    # third_line = []
+    #
+    # first_line << new_array.shift
+    # second_line << new_array.shift
+    # third_line << new_array.shift
+    #
+    # first_line
+    # second_line
+    # third_line
+    #
+    # require "pry"; binding.pry
   end
+
+
 end

@@ -6,7 +6,7 @@ require './lib/braille_dictionary'
 
 RSpec.describe Detranslator do
 
-  it 'exists' do
+  xit 'exists' do
     translated_text = Detranslator.new(input_file)
     expect(translated_text).to be_an_instance_of(Detranslator)
   end
